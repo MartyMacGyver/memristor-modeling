@@ -17,11 +17,13 @@ model one in LTspice (since I didn't find one there). This is the result.
 This is not by any means definitive, just an example of the memristor as
 described in one of the more well-known papers on the subject.
 
-This was most recently tested successfully with LTspice IV 4.23i
+This was most recently tested successfully with LTspice IV 4.23i and LTspice XVII 2016-08-24 (see install notes).
 
 http://www.linear.com/designtools/software/#LTspice
 
-Install the contents of the LTspice_model folder into the corresponding LTspice folders of your installation (e.g. "C:\Program Files\LTS\LTspiceIV")
+Install the contents of the LTspice_model folder into the corresponding LTspice folders of your installation:
+* For LTspice IV: "C:\Program Files\LTS\LTspiceIV" or wherever you installed it at.
+* For LTspice XVII: Careful! Even though the install dirs are similar to those in IV, there is a fully copy of `examples` and `lib` in "C:\Users\%username%\Documents\LTspiceXVII", which is currently the only tree XVII reads its libs and examples from! Therefore you should put the memristor lib files with the other libs in that tree if the default doesn't work for you (not sure if this is a transient or permanent quirk).
 
 Simulation:
 * Open `memristor_sim.asc`
