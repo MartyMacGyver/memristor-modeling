@@ -52,6 +52,8 @@ WINDOW 3 36 76 Left 2
 SYMATTR Prefix X
 SYMATTR Description Parameterized Memristor
 SYMATTR ModelFile memristor.sub
+SYMATTR Value memristor
+SYMATTR SpiceLine Ron=100 Roff=16K Rinit=11K D=10N uv=10F p=10
 SYMATTR SpiceModel memristor
 PIN 16 16 NONE 8
 PINATTR PinName plus
