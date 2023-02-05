@@ -1,6 +1,6 @@
 # Memristor Modeling repo
 
-**Includes a SPICE model suitable for use with LTspice**
+## Includes a SPICE model suitable for use with LTspice
 
 By Martin Falatic (www.Falatic.com)
 
@@ -10,8 +10,8 @@ Originally released via web 2013-01-10:
 
 http://www.falatic.com/index.php/69/memristor-simulation-with-ltspice-a-practical-example
 
-** These examples are provided for informational purposes ONLY. **
-** No warranty is expressed or implied. **
+**These examples are provided for informational purposes ONLY**
+**No warranty is expressed or implied**
 
 I'd been curious about memristors for a while, and decided to see if I could
 model one in LTspice (since I didn't find one there). This is the result.
@@ -22,14 +22,13 @@ This was most recently tested successfully with LTspice64 17.1.6 (see install no
 
 https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
 
-Install the contents of the LTspice_model folder into the corresponding LTspice folders of your installation:
+## Installation - for LTspice64 on Windows (should be similar for other platforms)
 
-* For LTspice64 on Windows (should be similar for other platforms)
-  * Install LTspice64 and browse to `%LOCALAPPDATA%\LTspice\lib`
-  * Clone this repo and browse to `LTspice_model`
-  * Copy the files from `lib\sub` and `lib\sym` to their respective LTspice `sub` and `sym` directories
+* Install LTspice64 and browse to `%LOCALAPPDATA%\LTspice\lib`
+* Clone this repo and browse to `LTspice_model`
+* Copy the files from `lib\sub` and `lib\sym` to their respective LTspice `sub` and `sym` directories
 
-Simulation:
+## Simulation
 
 * Open this `memristor_sim.asc`
 * Select "Simulate" -> "Run"
@@ -39,7 +38,11 @@ Simulation:
   * Select "Plot Settings" -> "Open Plot Settings File"
   * Select `memristor_sim.plt`
 
-Resources used:
+## Notes
+
+* The simulation here uses `p=10` as noted in the original paper (Fig. 5), but per [issue #1](https://github.com/MartyMacGyver/memristor-modeling/issues/1) using `p=1` is more consistent with the graphs there. This may be a typo in the paper.
+
+## References
 
 * SPICE Model of Memristor with Nonlinear Dopant Drift (2009, Biolek, et. al.) (can be found at http://www.radioeng.cz/fulltexts/2009/09_02_210_214.pdf)
 * Discussions on EDAboard (particularly http://www.edaboard.com/thread202648.html)
