@@ -1,4 +1,5 @@
 # Memristor Modeling repo
+
 **Includes a SPICE model suitable for use with LTspice**
 
 By Martin Falatic (www.Falatic.com)
@@ -12,27 +13,33 @@ http://www.falatic.com/index.php/69/memristor-simulation-with-ltspice-a-practica
 ** These examples are provided for informational purposes ONLY. **
 ** No warranty is expressed or implied. **
 
-I've been curious about memristors for a while, and decided to see if I could
+I'd been curious about memristors for a while, and decided to see if I could
 model one in LTspice (since I didn't find one there). This is the result.
 This is not by any means definitive, just an example of the memristor as
 described in one of the more well-known papers on the subject.
 
-This was most recently tested successfully with LTspice IV 4.23i and LTspice XVII 2016-08-24 (see install notes).
+This was most recently tested successfully with LTspice64 17.1.6 (see install notes).
 
-http://www.linear.com/designtools/software/#LTspice
+https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
 
 Install the contents of the LTspice_model folder into the corresponding LTspice folders of your installation:
-* For LTspice IV: "C:\Program Files\LTS\LTspiceIV" or wherever you installed it at.
-* For LTspice XVII: Careful! Even though the install dirs are similar to those in IV, there is a fully copy of `examples` and `lib` in "C:\Users\%username%\Documents\LTspiceXVII", which is currently the only tree XVII reads its libs and examples from! Therefore you should put the memristor lib files with the other libs in that tree if the default doesn't work for you (not sure if this is a transient or permanent quirk).
+
+* For LTspice64 on Windows (should be similar for other platforms)
+  * Install LTspice64 and browse to `%LOCALAPPDATA%\LTspice\lib`
+  * Clone this repo and browse to `LTspice_model`
+  * Copy the files from `lib\sub` and `lib\sym` to their respective LTspice `sub` and `sym` directories
 
 Simulation:
-* Open `memristor_sim.asc`
+
+* Open this `memristor_sim.asc`
 * Select "Simulate" -> "Run"
-* Click on the graph tab
-* Select "Plot Settings" -> "Open Plot Settings File"
-* Select `memristor_sim.plt`
-* This output should match what you see in the `memristor_sim_example.png` file
+* The output should match what you see in the `memristor_sim_example.png` file
+* If the plot settings didn't load automatically:  
+  * Click on the graph tab
+  * Select "Plot Settings" -> "Open Plot Settings File"
+  * Select `memristor_sim.plt`
 
 Resources used:
+
 * SPICE Model of Memristor with Nonlinear Dopant Drift (2009, Biolek, et. al.) (can be found at http://www.radioeng.cz/fulltexts/2009/09_02_210_214.pdf)
 * Discussions on EDAboard (particularly http://www.edaboard.com/thread202648.html)
